@@ -1,0 +1,35 @@
+<template>
+
+    <lightning-card>
+        <h3 slot="title" style="display: inline-block; text-align : center; margin: 0 auto">
+            <lightning-icon icon-name="standard:app" size="small"></lightning-icon>
+            Modules
+        </h3>   
+    </lightning-card>
+
+        <div class="slds-text-align--right" >
+            <lightning-icon if:true={Testmodule} icon-name="utility:success" variant="Success" size="small"></lightning-icon>
+        </div> 
+   
+    <lightning-layout multiple-rows class="slds-grid_align-spread slds-p-right_small">
+        <lightning-accordion allow-multiple-sections-open>
+            <lightning-accordion-section class="slds-text-heading_small" name={modulo.Name} label={modulo.Name}>
+                <div class="slds-m-bottom_small slds-text-align--right">
+                    <span class="tds-badge slds-badge slds-grid_vertical-align-right">+{modulo.Points__c} Points </span>
+                </div>
+                <div class="th-text--small th-text--bold slds-text-align--right ">
+                    ~{modulo.Time__c} minutes
+                </div>
+
+                <lightning-card variant="Narrow" title="UNITS" icon-name="standard:account" >
+                     <template if:true={modulo.Units__r} for:each={modulo.Units__r} for:item="unit">
+                        <lightning-accordion key={unit.Id} allow-multiple-sections-open>
+                            <c-unit-view checkunit={checkunit} unit={unit}></c-unit-view>
+                            </lightning-accordion>
+                        </template>
+                    </lightning-card>
+                </lightning-accordion-section>
+            </lightning-accordion>
+    </lightning-layout>
+
+</template>
