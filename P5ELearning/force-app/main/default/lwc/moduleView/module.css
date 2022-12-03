@@ -1,0 +1,30 @@
+.tds-badge {
+    text-transform: uppercase;
+    letter-spacing: .0625em;
+}
+.slds-badge {
+    color: #585858;
+    background-color: #e9df9f;
+    line-height: 1.5;
+    padding: 0.4rem 0.70rem;
+    font-weight: 700;
+    font-size: .75rem;
+    position: relative;
+}
+.slds-grid--vertical-align-right {
+    align-items: right;
+    align-content: right;
+}
+.th-text--small {
+    font-size: .875rem;
+}
+.th-text--bold {
+    font-weight: 700;
+}
+.slds-text-align--right {
+    text-align: right;
+}
+.margenes{
+    margin-left: 93%;
+    margin-right: 2%;
+}

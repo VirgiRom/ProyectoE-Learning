@@ -1,0 +1,40 @@
+.slds-align-content-center {
+    flex: 1 1;
+    align-self: center;
+    justify-content: center;
+}
+.slds-shrink-none {
+    flex-shrink: 0;
+}
+.slds-m-vertical--small {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.slds-p-left--medium{
+    padding-left: 1rem;
+}
+.slds-text-align--right {
+    text-align: right;
+}
+.slds-icon_container--circle {
+    line-height: .9;
+}
+.tds-bg_success {
+    background-color: #82dfb5;
+}
+.slds-text-align--left {
+    text-align: left;
+}
+.tds-badge {
+    text-transform: uppercase;
+    letter-spacing: .0625em;
+}
+.slds-badge {
+    color: #585858;
+    background-color: #e9df9f;
+    line-height: 1.5;
+    padding: 0.4rem 0.70rem;
+    font-weight: 700;
+    font-size: .75rem;
+    position: relative;
+}

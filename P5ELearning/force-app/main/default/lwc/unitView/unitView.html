@@ -1,0 +1,30 @@
+<template>
+
+    <lightning-card  variant="Narrow" if:true={unit} title={unit.Name} icon-name="standard:record">  
+
+        <div class="slds-m-bottom_small slds-text-align--right">
+            <span class="tds-badge slds-badge slds-grid_vertical-align-right">+{unit.Points__c} Points </span>
+        </div>
+        <div class="slds-text-align--right slds-text-title_bold">
+            ~{unit.Time__c} minutes
+        </div>&nbsp;&emsp;
+
+        <div class="margenes">
+        <lightning-layout multiple-rows class="slds-p-right_small">
+            <p class="slds-text-heading_small" >{unit.Description__c}</p>
+        </lightning-layout>&nbsp;&emsp;
+        </div>
+        <div>
+            <lightning-button label="View Units" slot="actions" onclick={ViewUnit} data-prop={unit.Id} ></lightning-button>
+        </div>
+
+        <div>
+            <div class="slds-p-left_medium slds-shrink-none slds-m-vertical_small slds-align-content-center slds-text-align_right">    
+                <lightning-card>
+                    <lightning-icon if:true={Testunit} icon-name="utility:success" variant="Success" size="medium"></lightning-icon>
+                </lightning-card>
+            </div> &nbsp;&emsp;          
+        </div>
+    </lightning-card>
+    
+</template>

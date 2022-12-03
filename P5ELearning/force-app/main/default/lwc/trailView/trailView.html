@@ -1,0 +1,32 @@
+<template>
+    <lightning-card class="bear-tile" > 
+
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:knowledge" size="small"></lightning-icon>&nbsp;{name}&emsp;
+        </h3>
+        
+        <div class="margenes">    
+            <div class="slds-m-bottom_small slds-text-align--right">
+                <span class="tds-badge slds-badge slds-grid_vertical-align-right">+{points} Points </span>                       
+            </div>
+            <div class=" slds-text-align--right slds-text-title_bold">
+                ~{time} minutes
+        </div>
+
+            <div class="slds-truncate slds-text-heading_medium">
+                <slot>{description}</slot>
+            </div>
+
+            <div class="margenProgress">
+                <div class="slds-m-right_x-small">{progress}%</div>
+                <lightning-progress-bar value={progress} size="large" variant="circular"></lightning-progress-bar>
+            </div>
+
+            <template for:each={modulos} for:item="xxx">    
+                <c-module-view key ={xxx.Id} checkunit ={checkunit} checkmodule={checkmodule} name={name} time={time} points={points} description={description} modulo={xxx}> </c-module-view>   
+            </template>
+        </div>
+
+    </lightning-card>
+</template>
+

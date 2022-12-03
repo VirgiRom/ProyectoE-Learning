@@ -1,0 +1,16 @@
+.my-radio-group {
+    --sds-c-button-line-height: 2.875rem;
+}
+:host {
+    --sds-c-radio-mark-color-foreground: #000000;
+    --sds-c-radio-color-background-checked: orange;
+}
+.selected {
+    border: 3px solid rgb(135, 97, 17);
+    border-radius: 5px;
+}
+
+.tile-wrapper {
+    cursor: pointer;
+    padding: 5px;
+}
